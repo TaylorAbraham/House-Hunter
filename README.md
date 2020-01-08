@@ -7,3 +7,6 @@ If you plan on working on Python, make sure you have at least version 3 (done us
 pip install pandas numpy sklearn
 ```
 Also make sure to read up on some basics of Scikit Learn if you're interested in working on the ML portion
+
+I'll be using my past ML game as a reference, so feel free to look over the code (particularly, /modules/mlnetwork.py):
+https://github.com/RyanAbraham/Uncharted-Realms-ML
