@@ -1,4 +1,4 @@
-# cuhacking-2020
+# House Hunter
 ## Setup
 We will all need Unity and Python 3 installed. As Unity is pretty much Windows-only, a Windows environment is preferred. We will use Git for the Python API/backend, and Unity Collab for the frontend. @Rafid I am putting you in charge of setting up a free Unity Collab team https://unity.com/unity/features/collaborate
 
