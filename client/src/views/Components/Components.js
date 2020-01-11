@@ -40,7 +40,7 @@ export default function Components(props) {
         image={require("assets/img/bg-house.png")}>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem style={{background: "rgba(0,0,0,0.3)", paddingBottom: "1em"}}>
+            <GridItem>
               <div className={classes.brand}>
                 <h1 className={classes.title}>House Hunter.</h1>
                 <h3 className={classes.subtitle}>
