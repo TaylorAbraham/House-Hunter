@@ -48,7 +48,11 @@ export default function Components(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/bg-house.jpg")}>
+      <Parallax
+        styles={{
+          "background-image": "-webkit-linear-gradient(bottom, rgba(229,229,229,0.999) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,0) 100% ), url(https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"
+        }}
+        image={require("assets/img/bg-house.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
