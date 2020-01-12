@@ -38,20 +38,20 @@ export default function HHSectionListings() {
             {
               listings.map(listing => (
                 <GridItem xs={8} sm={4} md={0}>
-                  <img src={listing.imgURL} width="300" height="300"></img>
+                  <img src={listing.imgURL} width="250" height="250"></img>
                   <GridContainer justify="left">
-                    <GridItem xs={5} sm={12} md={8}>
-                      <b>Insert Address</b>
-                    </GridItem>
                     <GridItem xs={5} sm={12} md={8}>
                       {listing.title}
                     </GridItem>
-                    <GridItem xs={12} sm={6} md={0}>
-                      <b><small>{listing.priceStr}</small></b>
-                      <Button color="warning" round>
+                    <GridItem xs={5} sm={12} md={8}>
+                      <b><small>Listed Price: {listing.priceStr}</small></b>
+                    </GridItem>
+                    <GridItem xs={5} sm={12} md={8}>
+                      <b><small>Calculated Price: ${(listing.expectedPrice) + ''}</small></b>
+                    </GridItem>
+                    <Button color="warning" round>
                         Contact
                     </Button>
-                    </GridItem>
 
                   </GridContainer>
                 </GridItem>
