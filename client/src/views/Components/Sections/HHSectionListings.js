@@ -35,6 +35,15 @@ export default function HHSectionListings() {
         </div>
         <div id="listing1" padding = {10}>
           <GridContainer justify="center" spacing="5">
+            {
+              listings.map(listing => (
+                <GridItem>
+                  <div>{listing.title}</div>
+                  <div>{listing.priceStr}</div>
+                  <img src={listing.imgURL} />
+                </GridItem>
+              ))
+            }
             <GridItem xs={6} sm={3} md={0}>
               <GridContainer justify="left">
                 <img src={require("assets/img/house.jpeg")} width="300" height="300"></img>
