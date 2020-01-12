@@ -33,87 +33,34 @@ export default function HHSectionListings() {
         <div className={classes.title}>
           <h2>Listings</h2>
         </div>
-        <div id="listing1" padding = {10}>
+        <div id="listing1" padding={10}>
           <GridContainer justify="center" spacing="5">
             {
               listings.map(listing => (
-                <GridItem>
-                  <div>{listing.title}</div>
-                  <div>{listing.priceStr}</div>
-                  <img src={listing.imgURL} />
+                <GridItem xs={8} sm={4} md={0}>
+                  <img src={listing.imgURL} width="300" height="300"></img>
+                  <GridContainer justify="left">
+                    <GridItem xs={5} sm={12} md={8}>
+                      <b>Insert Address</b>
+                    </GridItem>
+                    <GridItem xs={5} sm={12} md={8}>
+                      {listing.title}
+                    </GridItem>
+                    <GridItem xs={12} sm={6} md={0}>
+                      <b><small>{listing.priceStr}</small></b>
+                      <Button color="warning" round>
+                        Contact
+                    </Button>
+                    </GridItem>
+
+                  </GridContainer>
                 </GridItem>
               ))
             }
-            <GridItem xs={6} sm={3} md={0}>
-              <GridContainer justify="left">
-                <img src={require("assets/img/house.jpeg")} width="300" height="300"></img>
-                <GridItem xs={5} sm={12} md={8}>
-                  <b>123 Fake Street</b>
-                </GridItem>
-                <GridItem xs={5} sm={12} md={8}>
-                  Description of the property...
-              </GridItem>
-                <GridItem xs={5} sm={12} md={8}>
-                  <b><small>$500/month</small></b>
-                </GridItem>
-              
-                  <b><small>TAG • TAG • TAG</small></b>
-                
-                  <Button color="warning" round>
-                    Contact
-                  </Button>
-                
-              </GridContainer>
-            </GridItem>
-            <GridItem xs={6} sm={3} md={0}>
-              <GridContainer justify="left">
-                <img src={require("assets/img/house.jpeg")} width="300" height="300"></img>
-                <GridItem xs={5} sm={12} md={8}>
-                  <b>456 Fake Street</b>
-                </GridItem>
-                <GridItem xs={5} sm={12} md={8}>
-                  Description of the property...
-              </GridItem>
-                <GridItem xs={5} sm={12} md={8}>
-                  <b><small>$600/month</small></b>
-                </GridItem>
-                <GridItem xs={5} sm={12} md={8}>
-                  <b><small>TAG • TAG • TAG</small></b>
-                </GridItem>
-                <GridItem xs={5} sm={12} md={8}>
-                  <Button color="warning" round>
-                    Contact
-                </Button>
-                </GridItem>
-              </GridContainer>
-            </GridItem>
-            <GridItem xs={6} sm={3} md={0}>
-              <GridContainer justify="left">
-                <img src={require("assets/img/house.jpeg")} width="300" height="300"></img>
-                <GridItem xs={5} sm={12} md={8}>
-                  <b>789 Fake Street</b>
-                </GridItem>
-                <GridItem xs={5} sm={12} md={8}>
-                  Description of the property...
-              </GridItem>
-                <GridItem xs={5} sm={12} md={8}>
-                  <b><small>$600/month</small></b>
-                </GridItem>
-                <GridItem xs={5} sm={12} md={8}>
-                  <b><small>TAG • TAG • TAG</small></b>
-                </GridItem>
-                <GridItem xs={5} sm={12} md={8}>
-                  <Button color="warning" round>
-                    Contact
-                </Button>
-                </GridItem>
-              </GridContainer>
-            </GridItem>
           </GridContainer>
         </div>
 
       </div>
-
     </div>
   );
 }
