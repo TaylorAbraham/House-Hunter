@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Favorite from "@material-ui/icons/Favorite";
@@ -13,6 +13,19 @@ const useStyles = makeStyles(styles);
 
 export default function HHSectionListings() {
   const classes = useStyles();
+  const [listings, setListings] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/listings")
+      .then((response) => {
+        return response.json();
+      })
+      .then((json) => {
+        setListings(json);
+      });
+  }, []);
+
+  console.log("### listings", listings);
 
   return (
     <div className={classes.sections}>
