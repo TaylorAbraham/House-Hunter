@@ -24,7 +24,7 @@ def rate_listings(provided_listings):
     # rfc.fit(X, y)
 
     ## Convert the listing dict to a DataFrame
-    df_listings = pd.DataFrame(provided_listings, columns=["title","imgURL","priceStr","price","beds"])
+    df_listings = pd.DataFrame(provided_listings, columns=["title","url","imgURL","priceStr","price","beds"])
     listings = df_listings
     listings['1 + Den'] = 0
     listings['2 + Den'] = 0
@@ -32,7 +32,7 @@ def rate_listings(provided_listings):
     listings = listings.drop(['beds'], axis=1) # Drop the old beds feature
     listings = listings.groupby(lambda x:x, axis=1).sum()
     # Predict costs for each of the listings
-    preds = lr_clf.predict(listings.drop(['title', 'price', 'imgURL', 'priceStr'], axis=1))
+    preds = lr_clf.predict(listings.drop(['title', 'price', 'url', 'imgURL', 'priceStr'], axis=1))
 
     ratings = []
     expected_prices = []

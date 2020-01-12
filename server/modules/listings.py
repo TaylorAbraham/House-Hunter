@@ -16,6 +16,7 @@ def get_listings(num=20):
         break
       try:
         listing["title"] = div.find("a", class_="title").text.strip()
+        listing["url"] = "http://kijiji.ca" + div.find("a", class_="title")["href"]
         listing["imgURL"] = div.find("img")["data-src"]
         price = div.find("div", class_="price").text.strip()
         listing["priceStr"] = price

@@ -29,7 +29,7 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
-          buttonText="Components"
+          buttonText="Listings"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
@@ -51,12 +51,12 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
+          href="https://www.figma.com/file/HagggO00OGkOi04vpzKdVA/Material-Design-Theme-Kit-(Copy)?node-id=18131%3A29518"
           color="transparent"
           target="_blank"
           className={classes.navLink}
         >
-          <CloudDownload className={classes.icons} /> Download
+          <i class="fas fa-chart-bar"></i> Stats
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -77,7 +77,7 @@ export default function HeaderLinks(props) {
             color="transparent"
             className={classes.navLink}
           >
-            <i className={classes.socialIcons + " fab fa-github"} />
+            <i className={classes.socialIcons + " fab fa-github"} /> GitHub
           </Button>
         </Tooltip>
       </ListItem>
@@ -94,7 +94,7 @@ export default function HeaderLinks(props) {
             target="_blank"
             className={classes.navLink}
           >
-            <i className={classes.socialIcons + " fas fa-paint-brush"} />
+            <i className={classes.socialIcons + " fas fa-paint-brush"} /> Figma
           </Button>
         </Tooltip>
       </ListItem>

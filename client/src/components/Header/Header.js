@@ -18,7 +18,13 @@ import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 
 const useStyles = makeStyles(styles);
 
+
+const blackSource = require("assets/img/logo.svg");
+const whiteSource = require("assets/img/logo-white.svg");
+
 export default function Header(props) {
+  const [didScroll, setDidScroll] = React.useState(false);
+
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   React.useEffect(() => {
@@ -44,6 +50,7 @@ export default function Header(props) {
       document.body
         .getElementsByTagName("header")[0]
         .classList.add(classes[changeColorOnScroll.color]);
+      setDidScroll(true);
     } else {
       document.body
         .getElementsByTagName("header")[0]
@@ -51,6 +58,7 @@ export default function Header(props) {
       document.body
         .getElementsByTagName("header")[0]
         .classList.remove(classes[changeColorOnScroll.color]);
+      setDidScroll(false);
     }
   };
   const { color, rightLinks, leftLinks, brand, fixed, absolute } = props;
@@ -60,7 +68,8 @@ export default function Header(props) {
     [classes.absolute]: absolute,
     [classes.fixed]: fixed
   });
-  const brandComponent = <Button className={classes.title}>{brand}</Button>;
+  console.log("### didScroll", didScroll);
+  const brandComponent = <Button className={classes.title}><img style={{width: "64px"}} src={didScroll ? blackSource : whiteSource} /></Button>;
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>

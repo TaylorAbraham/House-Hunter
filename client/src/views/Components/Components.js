@@ -31,7 +31,7 @@ export default function Components(props) {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 400,
+          height: 300,
           color: "white"
         }}
         {...rest}
@@ -44,7 +44,7 @@ export default function Components(props) {
               <div className={classes.brand}>
                 <h1 className={classes.title}>House Hunter.</h1>
                 <h3 className={classes.subtitle}>
-                  Making finding housing as easy as 1-2-lease!
+                  Make finding housing as easy as <strong>1-2-lease!</strong>
                 </h3>
               </div>
             </GridItem>
