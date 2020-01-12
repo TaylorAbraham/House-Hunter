@@ -18,7 +18,6 @@ import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 
 const useStyles = makeStyles(styles);
 
-
 const blackSource = require("assets/img/logo.svg");
 const whiteSource = require("assets/img/logo-white.svg");
 
@@ -69,7 +68,7 @@ export default function Header(props) {
     [classes.fixed]: fixed
   });
   console.log("### didScroll", didScroll);
-  const brandComponent = <Button className={classes.title}><img style={{width: "64px"}} src={didScroll ? blackSource : whiteSource} /></Button>;
+  const brandComponent = <Button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className={classes.title}><img style={{width: "64px"}} src={didScroll ? blackSource : whiteSource} /></Button>;
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>

@@ -20,8 +20,8 @@ const provinces = ["Alberta", "British Columbia", "Manitoba", "New Brunswick", "
 export default function HHSectionListings() {
   const classes = useStyles();
   const [listings, setListings] = useState([]);
-  const [province, setProvince] = useState('')
-  const [isLoading, setIsLoading] = useState(false)
+  const [province, setProvince] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (province === "British Columbia") {
@@ -40,6 +40,12 @@ export default function HHSectionListings() {
   return (
     <div className={classes.sections}>
       <div className={classes.container}>
+        <div className={classes.brand}>
+          <h1 className={classes.title} style={{fontSize:"2.5rem"}}>Let's get started</h1>
+          <h3 className={classes.subtitle}>
+            Just select your region to begin finding great listings
+          </h3>
+        </div>
         <FormControl>
           <InputLabel id="demo-simple-select-label">Region</InputLabel>
           <Select
@@ -58,7 +64,7 @@ export default function HHSectionListings() {
           isLoading ? (<div><CircularProgress /></div>) : listings.length > 0 && (
             <div>
               <div className={classes.title}>
-                <h2>Listings</h2>
+                <h2><b>Listings</b></h2>
               </div>
               <div id="listing1">
                 <div className="listings-container">
@@ -74,18 +80,20 @@ export default function HHSectionListings() {
                           />
                         </a>
                         <div className="listing-details">
-                          <div>
+                          <div style={{marginTop: "0.5em"}}>
                             <StarRating rating={listing.rating} />
                           </div>
                           <div>
                             {listing.title}
                           </div>
+                          <hr />
                           <div>
-                            <b><small>Listed Price: {listing.priceStr.substring(0, listing.priceStr.length - 3)}</small></b>
+                            <i>Listed Price: </i><b>{listing.priceStr.substring(0, listing.priceStr.length - 3)}</b> /mo
                           </div>
                           <div>
-                            <b><small>Calculated Price: ${(parseInt(listing.expectedPrice)) + ''}</small></b>
+                            <i>Calculated Price: </i><b>${(parseInt(listing.expectedPrice)) + ''}</b> /mo
                           </div>
+                          <hr />
                         </div>
                       </div>
                     ))
