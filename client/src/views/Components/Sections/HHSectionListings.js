@@ -14,39 +14,84 @@ const useStyles = makeStyles(styles);
 export default function HHSectionListings() {
   const classes = useStyles();
 
-  return(
+  return (
     <div className={classes.sections}>
       <div className={classes.container}>
         <div className={classes.title}>
-          <h2>Basic Elements</h2>
+          <h2>Listings</h2>
         </div>
-        <div id="buttons">
-          <div className={classes.title}>
-            <h3>
-              Buttons
-              <br />
-              <small>Pick your style</small>
-            </h3>
-          </div>
-          <GridContainer justify="center">
-            <GridItem xs={12} sm={12} md={8}>
-              <Button color="primary">Default</Button>
-              <Button color="primary" round>
-                round
-              </Button>
-              <Button color="primary" round>
-                <Favorite className={classes.icons} /> with icon
-              </Button>
-              <Button justIcon round color="primary">
-                <Favorite className={classes.icons} />
-              </Button>
-              <Button color="primary" simple>
-                simple
-              </Button>
+        <div id="listing1" padding = {10}>
+          <GridContainer justify="center" spacing="5">
+            <GridItem xs={6} sm={3} md={0}>
+              <GridContainer justify="left">
+                <img src={require("assets/img/house.jpeg")} width="300" height="300"></img>
+                <GridItem xs={5} sm={12} md={8}>
+                  <b>123 Fake Street</b>
+                </GridItem>
+                <GridItem xs={5} sm={12} md={8}>
+                  Description of the property...
+              </GridItem>
+                <GridItem xs={5} sm={12} md={8}>
+                  <b><small>$500/month</small></b>
+                </GridItem>
+              
+                  <b><small>TAG • TAG • TAG</small></b>
+                
+                  <Button color="warning" round>
+                    Contact
+                  </Button>
+                
+              </GridContainer>
+            </GridItem>
+            <GridItem xs={6} sm={3} md={0}>
+              <GridContainer justify="left">
+                <img src={require("assets/img/house.jpeg")} width="300" height="300"></img>
+                <GridItem xs={5} sm={12} md={8}>
+                  <b>456 Fake Street</b>
+                </GridItem>
+                <GridItem xs={5} sm={12} md={8}>
+                  Description of the property...
+              </GridItem>
+                <GridItem xs={5} sm={12} md={8}>
+                  <b><small>$600/month</small></b>
+                </GridItem>
+                <GridItem xs={5} sm={12} md={8}>
+                  <b><small>TAG • TAG • TAG</small></b>
+                </GridItem>
+                <GridItem xs={5} sm={12} md={8}>
+                  <Button color="warning" round>
+                    Contact
+                </Button>
+                </GridItem>
+              </GridContainer>
+            </GridItem>
+            <GridItem xs={6} sm={3} md={0}>
+              <GridContainer justify="left">
+                <img src={require("assets/img/house.jpeg")} width="300" height="300"></img>
+                <GridItem xs={5} sm={12} md={8}>
+                  <b>789 Fake Street</b>
+                </GridItem>
+                <GridItem xs={5} sm={12} md={8}>
+                  Description of the property...
+              </GridItem>
+                <GridItem xs={5} sm={12} md={8}>
+                  <b><small>$600/month</small></b>
+                </GridItem>
+                <GridItem xs={5} sm={12} md={8}>
+                  <b><small>TAG • TAG • TAG</small></b>
+                </GridItem>
+                <GridItem xs={5} sm={12} md={8}>
+                  <Button color="warning" round>
+                    Contact
+                </Button>
+                </GridItem>
+              </GridContainer>
             </GridItem>
           </GridContainer>
         </div>
+
       </div>
+
     </div>
   );
 }
