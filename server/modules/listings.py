@@ -31,7 +31,7 @@ if __name__ == "__main__":
   csv_columns = ["title", "imgURL", "priceStr", "price", "beds"]
   l = get_listings()
   print(l)
-  with open("file.csv", "w") as csvfile:
+  with open("../data/listings.csv", 'w') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
     writer.writeheader()
     for data in l:

@@ -3,6 +3,7 @@ from flask_cors import CORS
 import json
 
 from modules.listings import get_listings
+from modules.mlnetwork import rate_listings
 
 listings = []
 
@@ -22,4 +23,8 @@ def listroute():
 
 if __name__ == "__main__":
   listings = get_listings(20)
+  ratings, expected_prices = rate_listings(listings)
+  for i in range(len(listings)):
+    listings[i]['rating'] = ratings[i]
+    listings[i]['expectedPrice'] = expected_prices[i]
   app.run()
