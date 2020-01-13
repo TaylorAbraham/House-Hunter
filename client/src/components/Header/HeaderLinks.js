@@ -78,7 +78,7 @@ export default function HeaderLinks(props) {
             target="_blank"
             className={classes.navLink}
           >
-            <i className={classes.socialIcons + " fas fa-paint-brush"} /> Figma
+            <i className={classes.socialIcons + " fas fa-paint-brush"} /> UX Designs
           </Button>
         </Tooltip>
       </ListItem>
