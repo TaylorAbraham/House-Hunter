@@ -1,4 +1,8 @@
 ![House Hunter screenshot](img/Screenshot.png)
+
+# Demo
+[![House Hunter demo video](https://i.imgur.com/cy5yTpw.png)](https://drive.google.com/file/d/1y_CQJiSg_qynqzVyTWnylE8JL-mHd-WG/view)
+
 # About
 ## Inspiration
 Finding a place in a new city can be tough. You generally don't know what the average housing for a certain place you want to rent is. This is to help first time renters in the city to be accustomed to the house rentals.
