@@ -1,6 +1,8 @@
 ![House Hunter screenshot](img/Screenshot.png)
 
-# Demo
+# Demo Video
+Click below to view!
+
 [![House Hunter demo video](https://i.imgur.com/cy5yTpw.png)](https://drive.google.com/file/d/1y_CQJiSg_qynqzVyTWnylE8JL-mHd-WG/view)
 
 # About
